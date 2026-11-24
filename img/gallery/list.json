@@ -1,0 +1,92 @@
+[
+ {
+  "k": 0,
+  "name": "Solitaire",
+  "fam": "With a stone"
+ },
+ {
+  "k": 1,
+  "name": "Oval halo",
+  "fam": "With a stone"
+ },
+ {
+  "k": 2,
+  "name": "Trilogy",
+  "fam": "With a stone"
+ },
+ {
+  "k": 3,
+  "name": "Three-row pav\u00e9 band",
+  "fam": "Bands"
+ },
+ {
+  "k": 4,
+  "name": "Signet with initials",
+  "fam": "Signets"
+ },
+ {
+  "k": 5,
+  "name": "Cameo from a photo",
+  "fam": "Signets"
+ },
+ {
+  "k": 6,
+  "name": "Scaled serpent",
+  "fam": "Complex shapes"
+ },
+ {
+  "k": 7,
+  "name": "Drop with a tail",
+  "fam": "Complex shapes"
+ },
+ {
+  "k": 8,
+  "name": "Bypass spiral",
+  "fam": "Complex shapes"
+ },
+ {
+  "k": 9,
+  "name": "Double-wrap crossover",
+  "fam": "Complex shapes"
+ },
+ {
+  "k": 10,
+  "name": "Braided wires with stones",
+  "fam": "Braided"
+ },
+ {
+  "k": 11,
+  "name": "Braided branches",
+  "fam": "Braided"
+ },
+ {
+  "k": 12,
+  "name": "Band with a rope",
+  "fam": "Braided"
+ },
+ {
+  "k": 13,
+  "name": "Molten metal",
+  "fam": "Organic"
+ },
+ {
+  "k": 14,
+  "name": "Wavy band",
+  "fam": "Organic"
+ },
+ {
+  "k": 15,
+  "name": "Open cuff",
+  "fam": "Organic"
+ },
+ {
+  "k": 16,
+  "name": "Sculpted waves",
+  "fam": "Organic"
+ },
+ {
+  "k": 17,
+  "name": "Dome with a flush drop",
+  "fam": "Organic"
+ }
+]

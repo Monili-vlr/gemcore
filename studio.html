@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Studio · Your GemCore pieces, wax prints and jewels</title>
+<meta name="description" content="Find the rings you created with GemCore in ChatGPT, order a professional wax print or the finished jewel. Free modelling from a photo.">
+<link rel="canonical" href="https://monili-vlr.github.io/gemcore/studio.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="GemCore Studio"><meta property="og:image" content="https://monili-vlr.github.io/gemcore/og.jpg">
+<link rel="stylesheet" href="style.css">
+<style>
+.banner{display:block;background:var(--velvet);color:#F3EAD3;text-decoration:none;border-radius:16px;padding:22px 26px;font:500 clamp(20px,2.6vw,28px)/1.3 var(--head);margin-top:24px}
+.banner small{display:block;font:14px var(--body);color:#CFC6B2;margin-top:8px}
+.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:34px 0 0;padding:0;list-style:none;counter-reset:f}
+.funnel li{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px}
+.funnel li::before{counter-increment:f;content:counter(f);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;border:1px solid var(--gold);color:var(--bronze);font:600 15px var(--head);margin-bottom:8px}
+.funnel b{display:block;font:500 19px var(--head)}
+.funnel span{color:var(--muted);font-size:14px}
+@media (max-width:860px){.funnel{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.funnel{grid-template-columns:1fr}}
+.login{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:28px}
+@media (max-width:760px){.login{grid-template-columns:1fr;padding:20px}}
+.oai{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:40px;border:1px solid #111;background:#111;color:#fff;font:600 15px var(--body);cursor:pointer}
+.oai:hover{background:#333}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted);margin:14px 0}
+.consent input{margin-top:4px;width:18px;height:18px;flex:none}
+.notice{margin-top:14px;padding:12px 14px;border-radius:12px;background:#F6E7C9;color:#5d4310;font-size:14px}
+.notice[hidden]{display:none}
+.pieces{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px;margin-top:22px}
+.piece{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px;display:flex;flex-direction:column}
+.piece img{border-radius:10px}
+.piece h3{font-size:19px;margin:10px 0 2px}
+.piece .meta{font-size:12px;color:var(--muted)}
+.piece .files{display:flex;gap:6px;margin:10px 0;flex-wrap:wrap}
+.piece .files span{font:11px var(--mono);border:1px solid var(--line);border-radius:6px;padding:2px 6px;background:var(--ivory)}
+.piece .acts{display:grid;gap:8px;margin-top:auto}
+.piece .acts button{padding:10px 12px;font-size:14px;justify-content:center}
+.offer{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+.offer>div{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:22px}
+.offer ul{color:var(--muted);padding-left:18px}
+@media (max-width:760px){.offer{grid-template-columns:1fr}}
+dialog.ord{border:0;border-radius:18px;padding:0;max-width:min(94vw,520px);width:100%}
+dialog.ord::backdrop{background:rgba(14,18,15,.7)}
+.ord .in{padding:24px}
+.ord img{width:120px;float:right;margin:0 0 8px 12px;border-radius:10px;border:1px solid var(--line)}
+.ord .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;clear:both}
+.preview{display:inline-block;font:700 10px var(--body);letter-spacing:.14em;background:#F6E7C9;color:#7A5410;padding:3px 9px;border-radius:20px}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap nav">
+  <a class="brand" href="./"><span class="logo" aria-hidden="true">G</span>GemCore</a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="links" aria-label="Open menu">&#9776;</button>
+  <nav class="links" id="links" aria-label="Main">
+    <a href="./">Home</a><a href="#signin">Sign in</a><a href="#pieces">Your pieces</a><a href="#print">Wax print &amp; jewels</a><a href="#photo">From a photo</a>
+    <a class="btn" href="mailto:scrvlr80@gmail.com?subject=GemCore%20access">Request access</a>
+  </nav>
+</div></header>
+
+<main id="main">
+<section class="hero" style="padding-bottom:40px"><div class="wrap">
+  <div class="eyebrow">GemCore Studio <span class="preview">PREVIEW · NOT LIVE YET</span></div>
+  <h1>From the chat <span class="it">to your hand.</span></h1>
+  <p class="lead">Outside ChatGPT, on this website, you will find the rings you created with GemCore, ready to print in wax or to make as a finished jewel. Sign-in and ordering are not connected yet: this page shows how it will work.</p>
+  <a class="banner" href="#photo">We model your object from a photo for free. You pay only the professional wax print, or the finished jewel.<small>Send us your photos → we model the ring with GemCore → you decide.</small></a>
+  <ol class="funnel" aria-label="How ordering works">
+    <li><b>Create in ChatGPT</b><span>Design the ring with GemCore in the chat. The plugin is free.</span></li>
+    <li><b>Sign in</b><span>Continue with your ChatGPT (OpenAI) account on this site.</span></li>
+    <li><b>Find your pieces</b><span>Every ring you created, with its STL and STEP files.</span></li>
+    <li><b>Order</b><span>A professional wax print, or the finished jewel in metal.</span></li>
+  </ol>
+</div></section>
+
+<section id="signin"><div class="wrap">
+  <div class="eyebrow">Step 2 · Sign in</div><h2>Your GemCore pieces</h2>
+  <div class="login">
+    <div>
+      <p>To see the pieces you created in the chat, sign in with your ChatGPT account.</p>
+      <label class="consent"><input type="checkbox" id="consent"> <span>I have read the <a href="privacy.html">privacy policy</a> and agree to my data being processed to show me my pieces.</span></label>
+      <button class="oai" id="oai" type="button"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="#fff" stroke-width="2"/><circle cx="12" cy="12" r="3.5" fill="#fff"/></svg>Continue with ChatGPT</button>
+      <p class="notice" id="oaiMsg" role="status" hidden></p>
+      <p style="font-size:13px;color:var(--muted);margin-top:16px">GemCore is an independent service: it is not made, sponsored or endorsed by OpenAI.</p>
+    </div>
+    <div>
+      <h3>What happens when you sign in</h3>
+      <ul style="color:var(--muted);padding-left:18px">
+        <li>The site receives only an account identifier from OpenAI, to match you with the pieces you made in the chat.</li>
+        <li>No password is shared with GemCore.</li>
+        <li>You can sign out or delete all your pieces and data at any time.</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="pieces"><div class="wrap">
+  <div class="eyebrow">Step 3 · Your pieces</div><h2>Ready to print, <span class="it">ready to make.</span></h2>
+  <p class="lead"><span class="preview">EXAMPLE</span> After signing in you will see your own rings here. The cards below are example pieces built by GemCore, to show the page.</p>
+  <div class="pieces" id="plist"></div>
+</div></section>
+
+<section id="print"><div class="wrap">
+  <div class="eyebrow">Step 4 · Order</div><h2>Wax print <span class="it">or finished jewel.</span></h2>
+  <div class="offer">
+    <div><h3>Professional wax print</h3><p style="color:var(--muted)">Your ring printed in castable wax from the same STL that GemCore checked, ready for your jeweller to cast.</p>
+      <ul><li>Printed from the production STL (tessellation 0.005 mm).</li><li>A person checks the file before printing.</li><li>Price, delivery times and countries: shown at checkout when ordering opens.</li></ul></div>
+    <div><h3>Finished jewel</h3><p style="color:var(--muted)">We make the ring in metal for you: cast, set and finished.</p>
+      <ul><li>Metal and stones as designed in the chat.</li><li>The Weight panel gives the metal estimate for each alloy.</li><li>Price and times: quoted for each piece when ordering opens.</li></ul></div>
+  </div>
+  <p class="caption">Checkout is not active yet. No payment can be made on this site today.</p>
+</div></section>
+
+<section id="photo"><div class="wrap">
+  <div class="eyebrow">Free modelling</div><h2>Have a photo? <span class="it">We model it for free.</span></h2>
+  <p class="lead">Send us 1 to 8 photos of the ring you want, from different sides. We model it with GemCore at no cost; you pay only if you order the wax print or the finished jewel. A perfect copy of the shape is not guaranteed.</p>
+  <div class="offer">
+    <div><h3>What to send</h3><ul><li>Photos (JPG, PNG or WebP, up to 10 MB each).</li><li>What kind of ring it is (solitaire, band, signet…).</li><li>Size, metal and stones, if you know them.</li></ul></div>
+    <div><h3>How</h3><p style="color:var(--muted)">For now by email. Your photos are used only to model your ring.</p>
+      <a class="btn" href="mailto:scrvlr80@gmail.com?subject=GemCore%20-%20model%20from%20a%20photo&amp;body=Kind%20of%20ring%3A%0ASize%3A%0AMetal%3A%0AStones%3A%0A%0A(attach%201-8%20photos)">Send photos by email</a></div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div>&copy; 2026 GemCore. All rights reserved. &middot; <a href="mailto:scrvlr80@gmail.com">scrvlr80@gmail.com</a></div>
+  <nav aria-label="Legal"><a href="./">Home</a><a href="privacy.html">Privacy</a><a href="license.html">License and credits</a></nav>
+</div></footer>
+
+<dialog class="ord" id="ord" aria-labelledby="ordT"><div class="in">
+  <img id="ordImg" alt="">
+  <div class="eyebrow" id="ordK"></div><h3 id="ordT"></h3>
+  <p style="color:var(--muted)">Ordering is not open yet, so nothing is charged. Write to us and we will tell you price and times for this piece, or let you know when ordering opens.</p>
+  <div class="row"><a class="btn" id="ordMail" href="#">Ask by email</a><button class="btn ghost" type="button" id="ordClose">Close</button></div>
+</div></dialog>
+
+<script>
+(() => {
+  const $ = (s) => document.querySelector(s);
+  const burger = $('#burger'), links = $('#links');
+  burger.onclick = () => { const o = links.classList.toggle('open'); burger.setAttribute('aria-expanded', o); burger.innerHTML = o ? '&#10005;' : '&#9776;'; };
+  links.addEventListener('click', (e) => { if (e.target.closest('a') && links.classList.contains('open')) burger.click(); });
+  // sign-in is shown but not connected: every click answers
+  $('#oai').onclick = () => {
+    const m = $('#oaiMsg'); m.hidden = false;
+    m.textContent = $('#consent').checked
+      ? 'Sign-in with ChatGPT is not connected yet. Your pieces stay safe in the chat; write to us to be told when it opens.'
+      : 'Please tick the box above first. (Sign-in with ChatGPT is not connected yet.)';
+  };
+  const P = [[0, 'Solitaire', 'With a stone · 750 yellow gold · IT 14'], [1, 'Oval halo', 'With a stone · 750 white gold'], [4, 'Signet with initials', 'Signet · initials GC'], [6, 'Scaled serpent', 'Complex shape'], [12, 'Band with a rope', 'Braided'], [13, 'Molten metal', 'Organic']];
+  $('#plist').innerHTML = P.map(([k, n, m], i) => `<article class="piece"><img src="img/gallery/${String(k).padStart(2, '0')}.webp" width="480" height="480" loading="lazy" alt="${n}, example piece built by GemCore"><h3>${n}</h3><div class="meta">${m} · example</div><div class="files"><span>STL</span><span>STEP</span><span>OBJ</span></div><div class="acts"><button class="btn" type="button" data-i="${i}" data-k="wax">Order wax print</button><button class="btn ghost" type="button" data-i="${i}" data-k="jewel">Order the jewel</button></div></article>`).join('');
+  const d = $('#ord');
+  $('#plist').addEventListener('click', (e) => {
+    const b = e.target.closest('button[data-i]'); if (!b) return;
+    const [k, n] = P[+b.dataset.i], wax = b.dataset.k === 'wax';
+    $('#ordImg').src = `img/gallery/${String(k).padStart(2, '0')}.webp`;
+    $('#ordK').textContent = wax ? 'Wax print' : 'Finished jewel'; $('#ordT').textContent = n + ' (example)';
+    $('#ordMail').href = 'mailto:scrvlr80@gmail.com?subject=' + encodeURIComponent('GemCore - ' + (wax ? 'wax print' : 'finished jewel'));
+    d.showModal();
+  });
+  $('#ordClose').onclick = () => d.close();
+  d.addEventListener('click', (e) => { if (e.target === d) d.close(); });
+})();
+</script>
+</body>
+</html>
