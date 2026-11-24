@@ -244,7 +244,7 @@ const IM = {};
 function fixAttrs(s) { let p; do { p = s; s = s.replace(/style="([^"]*)"((?:\s+[\w-]+(?:="[^"]*")?)*?)\s+style="/g, (m, a, mid) => mid + ' style="' + a + ';'); } while (s !== p); return s; }
 function show(k, fromAudio) { i = k; el = 0; if (!fromAudio && aud.src) { try { aud.currentTime = ST[k]; } catch (e) {} } scene.innerHTML = fixAttrs(S[k].h()); stage.classList.toggle('darkhud', !!S[k].dark); scene.classList.toggle('dark', !!S[k].dark);
   const cu = document.getElementById('curtain'); cu.classList.remove('go'); void cu.offsetWidth; cu.classList.add('go'); stitle.textContent = S[k].t; cap.textContent = S[k].v; if (paused) toggle(); }
-function toggle() { paused = !paused; document.body.classList.toggle('paused', paused); if (!aud.src) return; if (paused) aud.pause(); else { try { aud.currentTime = ST[i] + el; } catch (e) {} aud.play().catch(() => { if (!paused) toggle(); document.getElementById('start').hidden = false; }); } }
+function toggle() { paused = !paused; document.body.classList.toggle('paused', paused); if (!aud.src) return; if (paused) aud.pause(); else { try { aud.currentTime = ST[i] + el; } catch (e) {} aud.play().catch(() => { aud.muted = true; aud.play().catch(() => {}); const on = (e) => { aud.muted = false; e.stopPropagation(); e.preventDefault(); removeEventListener('click', on, true); }; addEventListener('click', on, true); }); } }
 function fit() { const s = Math.min(innerWidth / 1280, innerHeight / 720); stage.style.transform = `translate(-50%,-50%) scale(${s})`; }
 addEventListener('resize', fit); fit();
 addEventListener('keydown', (e) => {
@@ -276,9 +276,18 @@ function tick(now) {
   const _q = new URLSearchParams(location.search), _st = document.getElementById('start');
   show(Math.min(S.length - 1, Number(_q.get('s')) || 0));
   if (_q.has('s') || _q.has('t')) _st.hidden = true; else { toggle(); _st.onclick = (e) => { e.stopPropagation(); _st.hidden = true; setVoice(true); if (paused) toggle(); }; }
-  if (_q.has('autoplay')) _st.onclick(new Event('click'));
+  if (!(_q.has('s') || _q.has('t') || _q.get('autoplay') === '0')) _st.onclick(new Event('click')); // start at once, no start screen
   // checking aid: ?s=3&t=6 freezes scene 3 at its sixth second
   const _t = Number(new URLSearchParams(location.search).get('t')); if (_t) setTimeout(() => { paused = true; spin = _t; document.getAnimations().forEach((a) => { try { a.currentTime = _t * 1000; a.pause(); } catch (e) {} }); }, 200);
 })();
 requestAnimationFrame(tick);
-</script></body></html>
+</script>
+<style>#mai-vc{position:fixed;z-index:90;top:calc(12px + env(safe-area-inset-top,0px));right:calc(12px + env(safe-area-inset-right,0px));display:flex;gap:8px}#mai-vc a,#mai-vc button{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.35);background:rgba(15,18,28,.66);color:#fff;font:700 13px system-ui,-apple-system,"Segoe UI",sans-serif;text-decoration:none;cursor:pointer;backdrop-filter:blur(6px)}#mai-vc .bk{display:none}html.standalone #mai-vc .bk{display:inline-flex}</style>
+<div id="mai-vc"><a class="bk" href="../">&larr; Back to GemCore</a><button type="button" id="mai-fs">&#x26F6; Full screen</button></div>
+<script>(() => { if (window.self === window.top) document.documentElement.classList.add('standalone');
+  const box = document.getElementById('mai-vc'), b = document.getElementById('mai-fs');
+  ['click', 'pointerdown', 'mousedown'].forEach(t => box.addEventListener(t, e => e.stopPropagation()));
+  b.addEventListener('click', () => { if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen?.().catch(() => {}); });
+  document.addEventListener('fullscreenchange', () => { b.textContent = document.fullscreenElement ? '✕ Exit full screen' : '⛶ Full screen'; });
+})();</script>
+</body></html>
