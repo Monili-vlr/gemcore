@@ -47,6 +47,10 @@ dialog.ord::backdrop{background:rgba(14,18,15,.7)}
 .ord .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;clear:both}
 .preview{display:inline-block;font:700 10px var(--body);letter-spacing:.14em;background:#F6E7C9;color:#7A5410;padding:3px 9px;border-radius:20px}
 </style>
+<style id="mai-home-css">.mai-home{display:inline-flex;align-items:center;gap:7px;padding:5px 12px 5px 6px;border-radius:999px;border:1px solid rgba(128,128,140,.38);background:rgba(128,128,140,.10);color:inherit;font:600 13.5px/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;text-decoration:none;white-space:nowrap;transition:border-color .2s}
+.mai-home:hover{border-color:#A5B4FC;text-decoration:none}
+.mai-home i{width:20px;height:20px;border-radius:6px;display:grid;place-items:center;background:linear-gradient(100deg,#5EEAD4,#A5B4FC 34%,#F0ABFC 66%,#FDBA74);flex:none}
+.mai-home i svg{width:12px;height:12px}</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -54,7 +58,7 @@ dialog.ord::backdrop{background:rgba(14,18,15,.7)}
   <a class="brand" href="./"><span class="logo" aria-hidden="true">G</span>GemCore</a>
   <button class="burger" id="burger" aria-expanded="false" aria-controls="links" aria-label="Open menu">&#9776;</button>
   <nav class="links" id="links" aria-label="Main">
-    <a href="./">Home</a><a href="#signin">Sign in</a><a href="#pieces">Your pieces</a><a href="#print">Wax print &amp; jewels</a><a href="#photo">From a photo</a>
+    <a class="mai-home" href="https://monili-vlr.github.io/" title="All MoniliAI products"><i aria-hidden="true"><svg viewBox="0 0 18 18"><path d="M3.5 13.5V5l5.5 5.5L14.5 5v8.5" fill="none" stroke="#0B0C11" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></i>MoniliAI</a><a href="./">Home</a><a href="#signin">Sign in</a><a href="#pieces">Your pieces</a><a href="#print">Wax print &amp; jewels</a><a href="#photo">From a photo</a>
     <a class="btn" href="mailto:scrvlr80@gmail.com?subject=GemCore%20access">Request access</a>
   </nav>
 </div></header>
