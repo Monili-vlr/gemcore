@@ -23,6 +23,7 @@
 .mai-home:hover{border-color:#A5B4FC;text-decoration:none}
 .mai-home i{width:20px;height:20px;border-radius:6px;display:grid;place-items:center;background:linear-gradient(100deg,#5EEAD4,#A5B4FC 34%,#F0ABFC 66%,#FDBA74);flex:none}
 .mai-home i svg{width:12px;height:12px}</style>
+<link rel="stylesheet" href="https://monili-vlr.github.io/mobile.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -69,7 +70,7 @@
 <section id="features"><div class="wrap">
   <div class="eyebrow">Main features</div><h2>Real panels, <span class="it">real pieces.</span></h2>
   <p class="lead">All screenshots are taken from the real GemCore viewer running locally.</p>
-  <div class="feat"><button class="shot" data-src="img/ui/welcome.webp" data-cap="Welcome panel with the catalogue"><img src="img/ui/welcome.webp" loading="lazy" width="1280" height="800" alt="GemCore welcome panel with a carousel of ring types"></button>
+  <p class="mai-swipe-hint">Swipe to see more</p><div class="mai-swipe mai-wrap"><div class="feat"><button class="shot" data-src="img/ui/welcome.webp" data-cap="Welcome panel with the catalogue"><img src="img/ui/welcome.webp" loading="lazy" width="1280" height="800" alt="GemCore welcome panel with a carousel of ring types"></button>
     <div><h3>A catalogue to start from</h3><p>22 ring types and 125 catalogue entries, in eight families: with a stone, bands, free closed shapes, open and wrapped, sculpted, braided, signets, special.</p><ul><li>78 entries are ready, 8 are close matches, 39 are marked “not yet”.</li><li>The model is told which pieces are ready and offers the nearest one.</li></ul></div></div>
   <div class="feat"><button class="shot" data-src="img/ui/shank.webp" data-cap="Shank panel"><img src="img/ui/shank.webp" loading="lazy" width="1280" height="800" alt="Shank panel with straight, tapered, knife-edge and cathedral shanks"></button>
     <div><h3>Editors under the piece</h3><p>Shank, Curves, Drawing, Size, Weight, Rope, Engrave, Stones, Regular pavé, Cage, Sculpt and Lines. The current choice is highlighted; a change rebuilds the ring.</p></div></div>
@@ -80,13 +81,13 @@
   <div class="feat"><button class="shot" data-src="img/ui/regular.webp" data-cap="Regular pavé"><img src="img/ui/regular.webp" loading="lazy" width="1280" height="800" alt="Band with regular rows of pavé stones"></button>
     <div><h3>Pavé</h3><p>Place one gem where you click, or lay regular rows along the spine of the band. Beads are added between the gems.</p></div></div>
   <div class="feat"><button class="shot" data-src="img/ui/sculpt.webp" data-cap="Sculpt panel"><img src="img/ui/sculpt.webp" loading="lazy" width="1280" height="800" alt="Sculpt panel on an organic ring"></button>
-    <div><h3>Free shapes, sculpt, ropes</h3><p>Bypass spirals, drops with a tail, serpents; molten and hammered surfaces; ropes and braids along an edge. The Drawing panel moves every point on its X/Y/Z axes.</p></div></div>
+    <div><h3>Free shapes, sculpt, ropes</h3><p>Bypass spirals, drops with a tail, serpents; molten and hammered surfaces; ropes and braids along an edge. The Drawing panel moves every point on its X/Y/Z axes.</p></div></div></div>
 </div></section>
 
 <section id="tools"><div class="wrap">
   <div class="eyebrow">Complete list</div><h2>Every tool, <span class="it">by area.</span></h2>
   <p class="lead">Names checked in the source code on <span class="today"></span>: 99 tools in the local MCP server (50 for the model, 49 used only by the 3D panel), 10 in the ChatGPT plugin server, 7 command-line commands and 76 routes of the local web API.</p>
-  <div class="groups">
+  <p class="mai-swipe-hint">Swipe to see more</p><div class="groups mai-swipe">
     <div class="group"><h3>Start a new piece</h3><dl>
       <dt>show_gemcore_welcome</dt><dd>Welcome panel: carousel, benchmarks and limits.</dd>
       <dt>list_ring_typologies</dt><dd>The catalogue: the first step of every new ring.</dd>
@@ -133,29 +134,29 @@
 <section id="bench"><div class="wrap">
   <div class="eyebrow">Benchmarks and measurements</div><h2>What is measured, <span class="it">and what is not.</span></h2>
   <p class="lead"><span class="tag m">MEASURED</span> means there is a test or a saved run that shows it, named next to the value. <span class="tag e">ESTIMATE</span> means it is computed or assumed, not proven.</p>
-  <div class="table"><table>
+  <div class="table"><table class="mai-cards">
     <thead><tr><th>Value</th><th>What</th><th>Status and basis</th></tr></thead>
     <tbody>
-    <tr><td class="n">326 / 327</td><td>Automatic tests run today: 326 passed, 1 skipped, 0 failed</td><td><span class="tag m">MEASURED</span><br><small>Pytest run of 24 Nov 2026, stopped after 50 minutes by its time limit at about 45% of the suite (the full suite takes about 2 hours).</small></td></tr>
-<tr><td class="n">7–77 s</td><td>Build + checks + STL and STEP export, measured today on 5 example specs: comfort band 7.4 s · trilogy 39.3 s · halo 48.2 s · solitaire IT 18 with V shank 63.6 s · high-prong ring 76.7 s</td><td><span class="tag m">MEASURED</span><br><small><code>gemcore generate examples/*.json</code>, 24 Nov 2026, Windows laptop, one at a time, full command time.</small></td></tr>
-<tr><td class="n">668 / 669</td><td>Automatic tests passed (1 skipped: optional rhino3dm library not installed)</td><td><span class="tag m">MEASURED</span><br><small>Full pytest suite of GemCore, last complete run saved on 30 Oct 2026 (<code>scripts/bench_runs/full_tests.log</code>), 2 h 02 min on a Windows laptop. A new full run started on 24 Nov 2026; this line is updated when it ends.</small></td></tr>
+    <tr><td data-label="Value" class="n">326 / 327</td><td data-label="What">Automatic tests run today: 326 passed, 1 skipped, 0 failed</td><td data-label="Status and basis"><span class="tag m">MEASURED</span><br><small>Pytest run of 24 Nov 2026, stopped after 50 minutes by its time limit at about 45% of the suite (the full suite takes about 2 hours).</small></td></tr>
+<tr><td data-label="Value" class="n">7–77 s</td><td data-label="What">Build + checks + STL and STEP export, measured today on 5 example specs: comfort band 7.4 s · trilogy 39.3 s · halo 48.2 s · solitaire IT 18 with V shank 63.6 s · high-prong ring 76.7 s</td><td data-label="Status and basis"><span class="tag m">MEASURED</span><br><small><code>gemcore generate examples/*.json</code>, 24 Nov 2026, Windows laptop, one at a time, full command time.</small></td></tr>
+<tr><td data-label="Value" class="n">668 / 669</td><td data-label="What">Automatic tests passed (1 skipped: optional rhino3dm library not installed)</td><td data-label="Status and basis"><span class="tag m">MEASURED</span><br><small>Full pytest suite of GemCore, last complete run saved on 30 Oct 2026 (<code>scripts/bench_runs/full_tests.log</code>), 2 h 02 min on a Windows laptop. A new full run started on 24 Nov 2026; this line is updated when it ends.</small></td></tr>
     
-    <tr><td class="n">1038 / 1050</td><td>Bases built in a stress run: every catalogue piece × sizes, metals, stones, then a chain of 2–4 changes</td><td><span class="tag m">MEASURED</span><br><small>Benchmark script <code>scripts/benchmark_1050.py</code>, results in <code>scripts/bench_runs/*.jsonl</code> (run 22–30 Oct 2026, last record per case). Not built: 7 refused with a reason, 5 timeout or crash.</small></td></tr>
-    <tr><td class="n">20.7 s</td><td>Median time to build a base in that run (90th percentile 73.4 s)</td><td><span class="tag m">MEASURED</span><br><small>Same files, 1038 bases, Windows laptop, 4 runs in parallel.</small></td></tr>
-    <tr><td class="n">1661</td><td>Changes applied in that run; 250 answered “unchanged” and 496 “refused”, each with the reason; 496 asked a question; 1 internal error</td><td><span class="tag m">MEASURED</span><br><small>Same files, 3042 change steps.</small></td></tr>
-    <tr><td class="n">125</td><td>Catalogue entries in 22 types: 78 ready, 8 close, 39 not yet</td><td><span class="tag m">MEASURED</span><br><small>Counted in <code>catalog/typologies.py</code>.</small></td></tr>
-    <tr><td class="n">± weight</td><td>Metal weight per alloy and stone carats</td><td><span class="tag e">ESTIMATE</span><br><small>Volume of the CAD solid × alloy density; carats from millimetres. Real casting weight depends on sprues, shrinkage and finishing.</small></td></tr>
-    <tr><td class="n">min. wall</td><td>Thinnest metal wall</td><td><span class="tag e">ESTIMATE</span><br><small>3000-ray heuristic; not a certified thickness analysis.</small></td></tr>
+    <tr><td data-label="Value" class="n">1038 / 1050</td><td data-label="What">Bases built in a stress run: every catalogue piece × sizes, metals, stones, then a chain of 2–4 changes</td><td data-label="Status and basis"><span class="tag m">MEASURED</span><br><small>Benchmark script <code>scripts/benchmark_1050.py</code>, results in <code>scripts/bench_runs/*.jsonl</code> (run 22–30 Oct 2026, last record per case). Not built: 7 refused with a reason, 5 timeout or crash.</small></td></tr>
+    <tr><td data-label="Value" class="n">20.7 s</td><td data-label="What">Median time to build a base in that run (90th percentile 73.4 s)</td><td data-label="Status and basis"><span class="tag m">MEASURED</span><br><small>Same files, 1038 bases, Windows laptop, 4 runs in parallel.</small></td></tr>
+    <tr><td data-label="Value" class="n">1661</td><td data-label="What">Changes applied in that run; 250 answered “unchanged” and 496 “refused”, each with the reason; 496 asked a question; 1 internal error</td><td data-label="Status and basis"><span class="tag m">MEASURED</span><br><small>Same files, 3042 change steps.</small></td></tr>
+    <tr><td data-label="Value" class="n">125</td><td data-label="What">Catalogue entries in 22 types: 78 ready, 8 close, 39 not yet</td><td data-label="Status and basis"><span class="tag m">MEASURED</span><br><small>Counted in <code>catalog/typologies.py</code>.</small></td></tr>
+    <tr><td data-label="Value" class="n">± weight</td><td data-label="What">Metal weight per alloy and stone carats</td><td data-label="Status and basis"><span class="tag e">ESTIMATE</span><br><small>Volume of the CAD solid × alloy density; carats from millimetres. Real casting weight depends on sprues, shrinkage and finishing.</small></td></tr>
+    <tr><td data-label="Value" class="n">min. wall</td><td data-label="What">Thinnest metal wall</td><td data-label="Status and basis"><span class="tag e">ESTIMATE</span><br><small>3000-ray heuristic; not a certified thickness analysis.</small></td></tr>
     </tbody></table></div>
   <h3 style="margin-top:44px">Technical specifications <span class="tag x">VERIFIED IN CODE</span></h3>
   <div class="table"><table><tbody>
-    <tr><th>Geometry</th><td>Exact B-rep solids (build123d / OpenCascade), units in millimetres</td></tr>
-    <tr><th>Export formats</th><td>STL (metal for production + separate stones), STEP (assembly), OBJ, metadata JSON, validation report</td></tr>
-    <tr><th>Print tessellation</th><td>Absolute chordal deflection 0.005 mm, angular 5°; deviation of 400 triangle centres from the B-rep ≤ 0.01 mm</td></tr>
-    <tr><th>Size check</th><td>Inner diameter measured on the triangles, within the size tolerance and within 0.02 mm of the CAD</td></tr>
-    <tr><th>Default thresholds</th><td>Wall 0.6 mm · prong Ø 0.7 mm · shank 1.0 mm · feature 0.3 mm · culet clearance 0.3 mm · stone/metal interference 0.01 mm³</td></tr>
-    <tr><th>Sizes</th><td>Italian, European ISO, US, UK (UK derived by rule); diameter / circumference in mm</td></tr>
-    <tr><th>Runs on</th><td>Python 3.12, Windows / macOS / Linux, local web UI on 127.0.0.1; MCP over stdio or HTTP</td></tr>
+    <tr><th>Geometry</th><td data-label="Value">Exact B-rep solids (build123d / OpenCascade), units in millimetres</td></tr>
+    <tr><th>Export formats</th><td data-label="Value">STL (metal for production + separate stones), STEP (assembly), OBJ, metadata JSON, validation report</td></tr>
+    <tr><th>Print tessellation</th><td data-label="Value">Absolute chordal deflection 0.005 mm, angular 5°; deviation of 400 triangle centres from the B-rep ≤ 0.01 mm</td></tr>
+    <tr><th>Size check</th><td data-label="Value">Inner diameter measured on the triangles, within the size tolerance and within 0.02 mm of the CAD</td></tr>
+    <tr><th>Default thresholds</th><td data-label="Value">Wall 0.6 mm · prong Ø 0.7 mm · shank 1.0 mm · feature 0.3 mm · culet clearance 0.3 mm · stone/metal interference 0.01 mm³</td></tr>
+    <tr><th>Sizes</th><td data-label="Value">Italian, European ISO, US, UK (UK derived by rule); diameter / circumference in mm</td></tr>
+    <tr><th>Runs on</th><td data-label="Value">Python 3.12, Windows / macOS / Linux, local web UI on 127.0.0.1; MCP over stdio or HTTP</td></tr>
   </tbody></table></div>
 </div></section>
 
