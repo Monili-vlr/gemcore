@@ -60,7 +60,7 @@ dialog.ord::backdrop{background:rgba(14,18,15,.7)}
   <button class="burger" id="burger" aria-expanded="false" aria-controls="links" aria-label="Open menu">&#9776;</button>
   <nav class="links" id="links" aria-label="Main">
     <a class="mai-home" href="https://monili-vlr.github.io/" title="All MoniliAI products"><i aria-hidden="true"><svg viewBox="0 0 18 18"><path d="M3.5 13.5V5l5.5 5.5L14.5 5v8.5" fill="none" stroke="#0B0C11" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></i>MoniliAI</a><a href="./">Home</a><a href="#signin">Sign in</a><a href="#pieces">Your pieces</a><a href="#print">Wax print &amp; jewels</a><a href="#photo">From a photo</a>
-    <a class="btn" href="mailto:scrvlr80@gmail.com?subject=GemCore%20access">Request access</a>
+    <a class="btn" href="https://monili-vlr.github.io/#contact" data-mai-contact="GemCore access">Request access</a>
   </nav>
 </div></header>
 
@@ -121,14 +121,14 @@ dialog.ord::backdrop{background:rgba(14,18,15,.7)}
   <p class="lead">Send us 1 to 8 photos of the ring you want, from different sides. We model it with GemCore at no cost; you pay only if you order the wax print or the finished jewel. A perfect copy of the shape is not guaranteed.</p>
   <div class="offer">
     <div><h3>What to send</h3><ul><li>Photos (JPG, PNG or WebP, up to 10 MB each).</li><li>What kind of ring it is (solitaire, band, signet…).</li><li>Size, metal and stones, if you know them.</li></ul></div>
-    <div><h3>How</h3><p style="color:var(--muted)">For now by email. Your photos are used only to model your ring.</p>
-      <a class="btn" href="mailto:scrvlr80@gmail.com?subject=GemCore%20-%20model%20from%20a%20photo&amp;body=Kind%20of%20ring%3A%0ASize%3A%0AMetal%3A%0AStones%3A%0A%0A(attach%201-8%20photos)">Send photos by email</a></div>
+    <div><h3>How</h3><p style="color:var(--muted)">Write to us with the contact form: we answer by email, and you reply with the photos. They are used only to model your ring.</p>
+      <a class="btn" href="https://monili-vlr.github.io/#contact" data-mai-contact="GemCore · model from a photo">Describe your ring</a></div>
   </div>
 </div></section>
 </main>
 
 <footer><div class="wrap">
-  <div>&copy; 2026 GemCore. All rights reserved. &middot; <a href="mailto:scrvlr80@gmail.com">scrvlr80@gmail.com</a></div>
+  <div>&copy; 2026 GemCore. All rights reserved. &middot; <a href="https://monili-vlr.github.io/#contact" data-mai-contact="GemCore">Contact</a></div>
   <nav aria-label="Legal"><a href="./">Home</a><a href="privacy.html">Privacy</a><a href="license.html">License and credits</a></nav>
 </div></footer>
 
@@ -160,12 +160,13 @@ dialog.ord::backdrop{background:rgba(14,18,15,.7)}
     const [k, n] = P[+b.dataset.i], wax = b.dataset.k === 'wax';
     $('#ordImg').src = `img/gallery/${String(k).padStart(2, '0')}.webp`;
     $('#ordK').textContent = wax ? 'Wax print' : 'Finished jewel'; $('#ordT').textContent = n + ' (example)';
-    $('#ordMail').href = 'mailto:scrvlr80@gmail.com?subject=' + encodeURIComponent('GemCore - ' + (wax ? 'wax print' : 'finished jewel'));
+    $('#ordMail').dataset.maiContact = 'GemCore · ' + (wax ? 'wax print' : 'finished jewel') + ' · ' + n; $('#ordMail').href = 'https://monili-vlr.github.io/#contact';
     d.showModal();
   });
   $('#ordClose').onclick = () => d.close();
   d.addEventListener('click', (e) => { if (e.target === d) d.close(); });
 })();
 </script>
+<script src="https://monili-vlr.github.io/contact.js" defer></script>
 </body>
 </html>
