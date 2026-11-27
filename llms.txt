@@ -1,0 +1,92 @@
+# GemCore
+
+> Real CAD rings from a conversation: exact geometry, exact finger sizes, automatic checks, STL and STEP export.
+
+Made by Monili VLR (https://monili-vlr.github.io/). How to get it: A plugin (MCP app) for ChatGPT and Codex, in early access. Ask for access through the Monili VLR contact form.
+Works in: ChatGPT, Codex. Example of what you write: "Design a size 14 ring with a twisted band."
+
+## Tools the AI can call (56)
+
+### Start a new piece
+
+- `show_gemcore_welcome`: Welcome panel: carousel, benchmarks and limits.
+- `list_ring_typologies`: The catalogue: the first step of every new ring.
+- `start_ring_typology`: Builds the base of a catalogue piece as a new project.
+- `list_jewelry_templates`: Parametric templates and their parameters.
+- `get_template_parameters`: Parametric templates and their parameters.
+- `create_jewelry_spec`: Reproduce an existing JewelrySpec and generate it.
+- `validate_jewelry_spec`: Reproduce an existing JewelrySpec and generate it.
+- `generate_jewelry`: Reproduce an existing JewelrySpec and generate it.
+
+### Change the piece
+
+- `modify_jewelry`: Incremental change by parameters or simple words.
+- `apply_design_operations`: A list of vocabulary operations as one revision.
+- `get_design_vocabulary`: A list of vocabulary operations as one revision.
+- `apply_style`: A catalogue style: split shank, cathedral, bezel…
+- `get_ring_shape`: The ring’s shape with a jeweller’s handles.
+- `set_ring_shape`: The ring’s shape with a jeweller’s handles.
+- `move_part`: Free-form pieces: move parts, edit by points.
+- `rebuild_with_handles`: Free-form pieces: move parts, edit by points.
+- `get_freeform_program`: Free-form pieces: move parts, edit by points.
+
+### Stones, surface, details
+
+- `get_pave`: Painted stones and beads.
+- `edit_pave`: Painted stones and beads.
+- `get_rope_contours`: Ropes and braids along an edge.
+- `make_rope`: Ropes and braids along an edge.
+- `get_ring_lines`: Grooves and ribs along the piece.
+- `set_ring_lines`: Grooves and ribs along the piece.
+- `hammer_finish`: Hammered texture; scrolls on the shoulders.
+- `engrave_scrolls`: Hammered texture; scrolls on the shoulders.
+- `engraving_sheet_prompt`: Engraving from a photo, in two steps.
+- `engrave_from_sheet`: Engraving from a photo, in two steps.
+
+### References and look
+
+- `analyze_reference`: “Make it like this photo”, then compare from the same side.
+- `compare_with_reference`: “Make it like this photo”, then compare from the same side.
+- `import_mesh_reference`: A mesh made elsewhere as a reference.
+- `set_look`: Look and render in words; the 3D viewer; the user’s pen sketch.
+- `show_jewelry_viewer`: Look and render in words; the 3D viewer; the user’s pen sketch.
+- `get_annotation`: Look and render in words; the 3D viewer; the user’s pen sketch.
+
+### Checks, history, export
+
+- `get_model_status`: Three validation states; technical sheet for the jeweller.
+- `get_validation_report`: Three validation states; technical sheet for the jeweller.
+- `get_tech_sheet`: Three validation states; technical sheet for the jeweller.
+- `list_revisions`: Immutable revisions.
+- `restore_revision`: Immutable revisions.
+- `compare_revisions`: Immutable revisions.
+- `export_stl`: STL (metal + separate stones) and STEP (assembly, mm).
+- `export_step`: STL (metal + separate stones) and STEP (assembly, mm).
+- `wait_for_job`: Waits for long builds.
+
+### Help inside the chat
+
+- `propose_editor`: Yes/No to open a panel; interpreter card; link to this site.
+- `show_interpretation`: Yes/No to open a panel; interpreter card; link to this site.
+- `show_gemcore_page_button`: Yes/No to open a panel; interpreter card; link to this site.
+- `get_gemcore_page`: Yes/No to open a panel; interpreter card; link to this site.
+- `find_command`: Command database, spoken tutorials, user preferences.
+- `tutorial_chapter`: Command database, spoken tutorials, user preferences.
+- `tutorial_search`: Command database, spoken tutorials, user preferences.
+- `get_gemcore_preferences`: Command database, spoken tutorials, user preferences.
+
+### ChatGPT plugin server
+
+- `create_ring_design`: Create, change, undo and show a ring in 3D.
+- `modify_ring_design`: Create, change, undo and show a ring in 3D.
+- `undo_ring_change`: Create, change, undo and show a ring in 3D.
+- `show_ring_design`: Create, change, undo and show a ring in 3D.
+- `quote_wax_print`: Wax-print quote and order page (ready in the code, not live).
+- `start_wax_print_order`: Wax-print quote and order page (ready in the code, not live).
+
+Plus 49 internal tools used only by the product's own panel, not called by the AI.
+
+## More
+
+- [All Monili VLR products](https://monili-vlr.github.io/llms.txt)
+- [Contact and access](https://monili-vlr.github.io/#contact)
